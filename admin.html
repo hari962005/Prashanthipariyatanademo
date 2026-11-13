@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Management Console | Prashanti Paryatana</title>
+  <meta name="description" content="Protected administrative dashboard for managing packages, itineraries, customer travel enquiries, and classical artist registrations." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+  <!-- ================= 1. AUTHENTICATION LOCK SCREEN ================= -->
+  <div id="adminLockScreen" class="admin-lock-screen">
+    <div class="admin-auth-card">
+      <img src="assets/logo.png" alt="Prashanti Paryatana" style="width: 76px; height: 76px; border-radius: 50%; box-shadow: 0 4px 16px rgba(0,0,0,0.3); margin-bottom: 1rem;" />
+      <h2>Prashanti Paryatana</h2>
+      <p>Secure Pilgrimage Administration Console</p>
+
+      <form id="adminLoginForm">
+        <div class="form-group" style="text-align: left;">
+          <label class="form-label">Administrator Username</label>
+          <input type="text" name="adminUsername" class="form-control" value="admin" required />
+        </div>
+        <div class="form-group" style="text-align: left; margin-bottom: 1.5rem;">
+          <label class="form-label">Secure Access PIN / Password</label>
+          <input type="password" name="adminPin" class="form-control" value="sanskrit108" required />
+        </div>
+        <button type="submit" class="form-submit-btn">
+          <i class="fa-solid fa-shield-halved"></i> Authenticate & Enter Console
+        </button>
+      </form>
+
+      <div class="admin-auth-credentials-hint">
+        <i class="fa-solid fa-circle-info" style="color: var(--color-saffron);"></i>
+        <strong>Default Admin Credentials:</strong><br />
+        Username: <code style="font-weight:700; color:var(--color-maroon);">admin</code> | PIN: <code style="font-weight:700; color:var(--color-maroon);">sanskrit108</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 2. PROTECTED ADMIN DASHBOARD ================= -->
+  <div id="adminMainDashboard" style="display: none;">
+    <!-- Top Admin Navbar -->
+    <nav class="admin-navbar">
+      <div class="admin-brand"><img src="assets/logo.png" alt="Logo" style="width: 32px; height: 32px; border-radius: 50%; margin-right: 0.5rem;" /><span class="font-sanskrit-style" style="font-size: 1.1rem; color: #fff;">PRASANTHI PARIYATANA • Admin Console</span></div>
+
+      <div class="admin-nav-actions">
+        <span class="admin-badge"><i class="fa-solid fa-user-shield"></i> Master Admin</span>
+        <a href="index.html" target="_blank" class="btn-admin-view-site">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Website
+        </a>
+        <button type="button" class="btn-admin-logout" onclick="adminLogout()">
+          <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+        </button>
+      </div>
+    </nav>
+
+    <div class="admin-container">
+      <!-- High-Level Metric Stat Cards -->
+      <div class="stats-overview-grid">
+        <div class="stat-card">
+          <div class="stat-info">
+            <span>Total Packages</span>
+            <h3 id="statTotalPackages">0</h3>
+          </div>
+          <div class="stat-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <span>Customer Enquiries</span>
+            <h3 id="statActiveEnquiries">0</h3>
+          </div>
+          <div class="stat-icon" style="color: var(--color-maroon);"><i class="fa-solid fa-envelope-open-text"></i></div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <span>Registered Artists</span>
+            <h3 id="statArtistRegistrations">0</h3>
+          </div>
+          <div class="stat-icon" style="color: var(--color-forest);"><i class="fa-solid fa-guitar"></i></div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <span>Cultural Events</span>
+            <h3 id="statCulturalEvents">0</h3>
+          </div>
+          <div class="stat-icon" style="color: #9B59B6;"><i class="fa-solid fa-calendar-star"></i></div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="admin-tabs-nav">
+        <button type="button" class="admin-tab-btn active" data-tab="tabPackages">
+          <i class="fa-solid fa-suitcase-rolling"></i> Pilgrimage Packages
+        </button>
+        <button type="button" class="admin-tab-btn" data-tab="tabEnquiries">
+          <i class="fa-solid fa-envelope-open-text"></i> Travel Enquiries
+        </button>
+        <button type="button" class="admin-tab-btn" data-tab="tabCultural">
+          <i class="fa-solid fa-drum"></i> Cultural Portal & Artists
+        </button>
+      </div>
+
+      <!-- TAB 1: PACKAGES MANAGER -->
+      <div id="tabPackages" class="admin-tab-panel active">
+        <div class="admin-section-header">
+          <div>
+            <h2>Manage Pilgrimage Packages</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Add, update, or remove packages across Bus Tours, Train Tours, Flight Packages, Trekking, and Cultural categories.
+            </p>
+          </div>
+          <div class="admin-actions-row">
+            <button type="button" class="btn-plan-journey" onclick="openAddPackageModal()" style="font-size: 0.78rem; padding: 0.6rem 1.2rem;">
+              <i class="fa-solid fa-plus"></i> Add New Package
+            </button>
+          </div>
+        </div>
+
+        <div class="admin-table-card">
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th style="width: 70px;">Image</th>
+                  <th>Package Name & Destination</th>
+                  <th>Category</th>
+                  <th>Duration</th>
+                  <th>Travel Mode</th>
+                  <th style="width: 120px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminPackagesTableBody">
+                <!-- Rendered by js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: TRAVEL ENQUIRIES MANAGER -->
+      <div id="tabEnquiries" class="admin-tab-panel">
+        <div class="admin-section-header">
+          <div>
+            <h2>Customer Travel Enquiries</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Review incoming yatra requests, manage consultation statuses, and record counselor notes.
+            </p>
+          </div>
+        </div>
+
+        <div class="admin-table-card">
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Ref ID</th>
+                  <th>Devotee Name & Contact</th>
+                  <th>Selected Package</th>
+                  <th>Departure Date</th>
+                  <th>Status</th>
+                  <th>Requirements</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminEnquiriesTableBody">
+                <!-- Rendered by js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: CULTURAL EVENTS & ARTISTS -->
+      <div id="tabCultural" class="admin-tab-panel">
+        <!-- Part A: Cultural Events -->
+        <div class="admin-section-header" style="margin-top: 1rem;">
+          <div>
+            <h2>Scheduled Cultural Performances</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Manage events displayed on the Cultural Travel Portal.</p>
+          </div>
+          <button type="button" class="btn-plan-journey" onclick="openAddEventModal()" style="font-size: 0.78rem; padding: 0.55rem 1rem;">
+            <i class="fa-solid fa-plus"></i> Add Cultural Event
+          </button>
+        </div>
+
+        <div class="admin-table-card" style="margin-bottom: 3rem;">
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Genre</th>
+                  <th>Artist / Troupe</th>
+                  <th>Dates</th>
+                  <th>Venue & City</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminEventsTableBody">
+                <!-- Rendered by js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Part B: Artist Registrations -->
+        <div class="admin-section-header">
+          <div>
+            <h2>Classical Artist Participation Registrations</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Review registered classical dancers, vocalists, and instrumentalists for temple programs.
+            </p>
+          </div>
+        </div>
+
+        <div class="admin-table-card">
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Reg ID</th>
+                  <th>Artist Name & City</th>
+                  <th>Art Form & Experience</th>
+                  <th>Preferred Circuits</th>
+                  <th>Portfolio</th>
+                  <th>Status</th>
+                  <th>Verify</th>
+                </tr>
+              </thead>
+              <tbody id="adminArtistsTableBody">
+                <!-- Rendered by js/admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= ADD / EDIT PACKAGE MODAL ================= -->
+  <div id="packageEditorModal" class="modal-backdrop">
+    <div class="modal-dialog" style="max-width: 880px;">
+      <div class="modal-header">
+        <h3 id="packageModalTitle"><i class="fa-solid fa-suitcase-rolling"></i> Add Pilgrimage Package</h3>
+        <button type="button" class="modal-close-btn" onclick="closePackageModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="packageEditorForm">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Package Identifier (Slug / ID) <span class="req">*</span></label>
+              <input type="text" name="pkgId" class="form-control" placeholder="e.g. bus-kashi-ayodhya" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Travel Category <span class="req">*</span></label>
+              <select name="pkgCategory" class="form-control" required>
+                <option value="bus">1. Bus Tours</option>
+                <option value="train">2. Train Tours</option>
+                <option value="flight">3. Flight Packages</option>
+                <option value="trekking">4. Trekking Expeditions</option>
+                <option value="cultural">5. Cultural Travel</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Package Title <span class="req">*</span></label>
+              <input type="text" name="pkgName" class="form-control" placeholder="e.g. Divya Kashi & Ayodhya Yatra" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Destination Region <span class="req">*</span></label>
+              <input type="text" name="pkgDestination" class="form-control" placeholder="e.g. Uttar Pradesh (Varanasi, Ayodhya)" required />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Duration <span class="req">*</span></label>
+              <input type="text" name="pkgDuration" class="form-control" placeholder="e.g. 7 Days / 6 Nights" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Starting Location Hub</label>
+              <input type="text" name="pkgStartingLocation" class="form-control" placeholder="e.g. New Delhi, Bengaluru, Chennai" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Transportation Mode <span class="req">*</span></label>
+              <input type="text" name="pkgTravelMode" class="form-control" placeholder="e.g. Vande Bharat Express & Private AC Transfers" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cover Photograph URL <span class="req">*</span></label>
+              <input type="text" name="pkgImage" class="form-control" placeholder="assets/temples/kashi.jpg or image URL" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Short Description (for Listing Card) <span class="req">*</span></label>
+            <textarea name="pkgShortDesc" class="form-control" style="min-height: 70px;" placeholder="Brief synopsis displayed on category cards..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Detailed Sacred Overview <span class="req">*</span></label>
+            <textarea name="pkgOverview" class="form-control" placeholder="Complete description of the pilgrimage..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Historical and Spiritual Background (Sthala Purana) <span class="req">*</span></label>
+            <textarea name="pkgHistory" class="form-control" placeholder="In-depth historical, Vedic, and philosophical background..." required></textarea>
+          </div>
+
+          <!-- Dynamic Day-wise Itinerary Editor -->
+          <div style="border-top: 1px solid var(--color-sandalwood-border); padding-top: 1.5rem; margin-top: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <h4 style="color: var(--color-maroon); font-size: 1.1rem;">
+                <i class="fa-regular fa-calendar-days"></i> Day-Wise Itinerary Builder
+              </h4>
+              <button type="button" class="btn-add-day" onclick="addItineraryDayRow()">
+                <i class="fa-solid fa-plus"></i> Add Another Day
+              </button>
+            </div>
+            <div id="itineraryEditorList">
+              <!-- Dynamically populated by JS -->
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Specific Temple Visits (one per line)</label>
+              <textarea name="pkgTemples" class="form-control" placeholder="Kashi Vishwanath Jyotirlinga&#10;Annapurna Temple&#10;Ram Janmabhoomi"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Educational & Spiritual Activities (one per line)</label>
+              <textarea name="pkgEducation" class="form-control" placeholder="Sunrise boat study of 84 ghats&#10;Vedic chanting workshop&#10;Discourse on Tulsidas"></textarea>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Inclusions (one per line)</label>
+              <textarea name="pkgInclusions" class="form-control" placeholder="All AC train tickets&#10;6 nights verified accommodation&#10;All sattvic meals"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Exclusions (one per line)</label>
+              <textarea name="pkgExclusions" class="form-control" placeholder="Personal seva charges&#10;Room service"></textarea>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Transport Details</label>
+              <input type="text" name="pkgTransport" class="form-control" value="Air-conditioned luxury vehicles and reserved express rail." />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Accommodation Details</label>
+              <input type="text" name="pkgAccommodation" class="form-control" value="Clean, peaceful 3-star heritage hotels and ashram guest suites." />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Meals & Prasadam</label>
+              <input type="text" name="pkgMeals" class="form-control" value="Pure sattvic vegetarian breakfast, lunch, and dinner. No onion/garlic." />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Safety & Dress Code</label>
+              <input type="text" name="pkgSafety" class="form-control" value="Traditional dress code required for sanctum entry. Paced for senior citizens." />
+            </div>
+          </div>
+
+          <button type="submit" class="form-submit-btn" style="margin-top: 1.5rem;">
+            <i class="fa-solid fa-floppy-disk"></i> Save Pilgrimage Package
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= VIEW / UPDATE ENQUIRY MODAL ================= -->
+  <div id="enquiryViewModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-envelope-open-text"></i> Pilgrimage Enquiry Details</h3>
+        <button type="button" class="modal-close-btn" onclick="document.getElementById('enquiryViewModal').classList.remove('open')">&times;</button>
+      </div>
+      <div id="enquiryViewModalBody" class="modal-body">
+        <!-- Rendered by js/admin.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD CULTURAL EVENT MODAL ================= -->
+  <div id="addEventModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-drum"></i> Add Cultural Performance Event</h3>
+        <button type="button" class="modal-close-btn" onclick="closeAddEventModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="addEventForm">
+          <div class="form-group">
+            <label class="form-label">Event Name <span class="req">*</span></label>
+            <input type="text" name="eventName" class="form-control" placeholder="e.g. Swathi Sangeetha Utsavam" required />
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Art Genre <span class="req">*</span></label>
+              <input type="text" name="eventGenre" class="form-control" placeholder="Carnatic Music, Bharatanatyam, etc." required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Featured Artist / Guru <span class="req">*</span></label>
+              <input type="text" name="eventArtist" class="form-control" placeholder="Maestros & Troupe" required />
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Festival Dates <span class="req">*</span></label>
+              <input type="text" name="eventDate" class="form-control" placeholder="e.g. Jan 10 – Jan 16, 2027" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Venue & City <span class="req">*</span></label>
+              <input type="text" name="eventVenue" class="form-control" placeholder="Venue Name" required />
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">City, State</label>
+              <input type="text" name="eventCity" class="form-control" placeholder="e.g. Chennai, Tamil Nadu" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Linked Travel Package ID</label>
+              <input type="text" name="eventPackageId" class="form-control" value="cultural-margazhi-chennai" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Event Description</label>
+            <textarea name="eventDesc" class="form-control" placeholder="Performance synopsis, festival importance..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Event Image URL</label>
+            <input type="text" name="eventImage" class="form-control" placeholder="assets/cultural/ayodhya-dance.jpg or image URL" />
+          </div>
+          <button type="submit" class="form-submit-btn">
+            <i class="fa-solid fa-plus"></i> Publish Cultural Event
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

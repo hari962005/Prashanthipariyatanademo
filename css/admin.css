@@ -1,0 +1,404 @@
+/* ==========================================================================
+   PRASHANTI PARYATANA - ADMIN DASHBOARD STYLESHEET
+   Protected Management Console, CRUD Modals, Data Tables & Metric Badges
+   ========================================================================== */
+
+.admin-body {
+  background-color: #F4F1EA;
+  color: #2D251F;
+}
+
+/* Admin Lock Screen / Authentication */
+.admin-lock-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #35101A 0%, #15090D 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  padding: 1.5rem;
+}
+
+.admin-auth-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-gold);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 440px;
+  padding: 2.8rem 2.2rem;
+  text-align: center;
+}
+
+.admin-auth-emblem {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-maroon);
+  color: var(--color-gold-bright);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  border: 2px solid var(--color-gold);
+}
+
+.admin-auth-card h2 {
+  font-size: 1.5rem;
+  color: var(--color-maroon);
+  margin-bottom: 0.4rem;
+}
+
+.admin-auth-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+}
+
+.admin-auth-credentials-hint {
+  margin-top: 1.2rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--color-sandalwood);
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--color-sandalwood-border);
+}
+
+/* Admin Top Bar */
+.admin-navbar {
+  background: var(--color-maroon-deep);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-gold);
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.admin-brand i {
+  color: var(--color-gold-bright);
+}
+
+.admin-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.admin-badge {
+  background: rgba(197, 160, 89, 0.2);
+  color: var(--color-gold-bright);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+}
+
+.btn-admin-view-site {
+  color: var(--color-sandalwood-light);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color var(--transition-fast);
+}
+
+.btn-admin-view-site:hover {
+  color: var(--color-gold-bright);
+}
+
+.btn-admin-logout {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-admin-logout:hover {
+  background: #C0392B;
+  border-color: #C0392B;
+}
+
+/* Admin Layout & Sidebar Tabs */
+.admin-container {
+  max-width: 1360px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Dashboard Stats Overview */
+.stats-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-sandalwood-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.stat-info h3 {
+  font-size: 1.8rem;
+  color: var(--color-maroon-deep);
+  margin-top: 0.2rem;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-sandalwood);
+  color: var(--color-saffron);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+/* Admin Tabs Navigation */
+.admin-tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-sandalwood-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.admin-tab-btn {
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: none;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.admin-tab-btn:hover {
+  color: var(--color-maroon);
+  background: var(--color-sandalwood);
+}
+
+.admin-tab-btn.active {
+  background: var(--color-maroon);
+  color: #fff;
+}
+
+.admin-tab-btn.active i {
+  color: var(--color-gold-bright);
+}
+
+/* Tab Panels */
+.admin-tab-panel {
+  display: none;
+}
+
+.admin-tab-panel.active {
+  display: block;
+}
+
+/* Section Header in Admin */
+.admin-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-section-header h2 {
+  font-size: 1.4rem;
+  color: var(--color-maroon);
+}
+
+.admin-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Data Tables */
+.admin-table-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-sandalwood-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.admin-table th {
+  background: var(--color-sandalwood);
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-sandalwood-border);
+}
+
+.admin-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-sandalwood-border);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+  background-color: var(--color-sandalwood-light);
+}
+
+/* Status Badges */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-pill.new { background: #E8F4FD; color: #1B65A3; }
+.status-pill.in-review { background: #FEF6E6; color: #B7791F; }
+.status-pill.confirmed { background: #E6F9EE; color: #1E7E45; }
+.status-pill.archived { background: #F1EFF0; color: #6D686B; }
+
+/* Table Action Buttons */
+.table-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-table-action {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-sandalwood-border);
+  background: #fff;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.82rem;
+}
+
+.btn-table-action:hover {
+  background: var(--color-sandalwood);
+  color: var(--color-maroon);
+}
+
+.btn-table-action.delete:hover {
+  background: #FDF2F2;
+  color: #C0392B;
+  border-color: #E6B8B8;
+}
+
+/* Day-wise Itinerary Editor in Admin Modal */
+.itinerary-editor-block {
+  border: 1px solid var(--color-sandalwood-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  background: var(--color-sandalwood);
+  margin-bottom: 1rem;
+}
+
+.itinerary-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.btn-remove-day {
+  background: none;
+  border: none;
+  color: #C0392B;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-add-day {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--color-maroon);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.btn-add-day:hover {
+  background: var(--color-sandalwood);
+}

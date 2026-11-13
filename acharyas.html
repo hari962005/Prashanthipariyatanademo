@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Three Great Acharyas | Prashanti Paryatana</title>
+  <meta name="description" content="Explore the philosophical systems, historical lives, and sacred pilgrimage routes of Adi Shankaracharya, Sri Ramanujacharya, and Sri Madhvacharya." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body data-page="acharyas">
+
+    <!-- ================= WEBSITE LOADING PRELOADER (FROM LOGO) ================= -->
+  <div id="sitePreloader" class="site-preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-mandala-ring"></div>
+        <div class="preloader-mandala-ring-outer"></div>
+        <img src="assets/logo.png" alt="Prashanti Paryatana" class="preloader-logo" />
+      </div>
+      <div class="preloader-sanskrit font-sanskrit-style">॥ सनातन संस्कृति यात्रा ॥</div>
+      <div class="preloader-title">PRASANTHI PARIYATANA</div>
+      <div class="preloader-tagline">Sanatanam Nityam Nirantaram</div>
+      <div class="preloader-progress-bar">
+        <div class="preloader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-om"></i>
+          <span class="font-sanskrit-style">॥ सनातन संस्कृति यात्रा • Dedicated to Sanatana Dharma ॥</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+919845012345">+91 98450 12345</a>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-links">
+          <a href="about.html">About</a>
+          <a href="heritage.html">Our Heritage</a>
+          <a href="acharyas.html" class="active">Acharyas</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a href="admin.html" class="admin-portal-link">
+          <i class="fa-solid fa-lock"></i> Admin Portal
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header-inner">
+            <a href="index.html" class="brand-identity">
+        <img src="assets/logo.png" alt="Prashanti Paryatana Logo" class="brand-logo-img" />
+        <div class="brand-text-wrap">
+          <span class="brand-name font-sanskrit-style">PRASANTHI <span>PARIYATANA</span></span>
+          <span class="brand-tagline">Sanatanam Nityam Nirantaram • Cultural Heritage</span>
+        </div>
+      </a>
+
+      <!-- 5 Prominent Categories -->
+      <nav class="categories-nav">
+        <a href="bus-tours.html" class="category-link">
+          <i class="fa-solid fa-bus-simple"></i>
+          <span>Bus Tours</span>
+        </a>
+        <a href="train-tours.html" class="category-link">
+          <i class="fa-solid fa-train-subway"></i>
+          <span>Train Tours</span>
+        </a>
+        <a href="flight-packages.html" class="category-link">
+          <i class="fa-solid fa-plane-departure"></i>
+          <span>Flight Packages</span>
+        </a>
+        <a href="trekking-expeditions.html" class="category-link">
+          <i class="fa-solid fa-person-hiking"></i>
+          <span>Trekking Expeditions</span>
+        </a>
+        <a href="cultural.html" class="category-link">
+          <i class="fa-solid fa-drum"></i>
+          <span>Cultural Travel</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-plan-journey" onclick="openEnquiryModal('', 'Acharya Heritage Pilgrimage', 'all')">
+          <i class="fa-solid fa-hands-praying"></i>
+          <span>Plan Your Journey</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="category-hero" style="background: linear-gradient(135deg, var(--color-maroon-deep) 0%, #170E10 100%);">
+    <div class="container category-hero-content">
+      <span class="section-eyebrow" style="color: var(--color-gold-bright);">Vedic Wisdom & Philosophy</span>
+      <h1>The Three Great Acharyas</h1>
+      <p>
+        The intellectual and spiritual architecture of Sanatana Dharma was synthesized by three transcendent philosopher-saints: Adi Shankaracharya, Sri Ramanujacharya, and Sri Madhvacharya. Explore their life histories, theological schools, and the sacred pilgrimage circuits they blessed.
+      </p>
+    </div>
+  </section>
+
+  <!-- Navigation Anchors -->
+  <div class="container filter-bar-wrap">
+    <div class="filter-bar" style="justify-content: center; gap: 1.5rem;">
+      <a href="#adi-shankara" class="filter-pill active">Adi Shankaracharya (Advaita)</a>
+      <a href="#ramanujacharya" class="filter-pill">Sri Ramanujacharya (Vishishtadvaita)</a>
+      <a href="#madhvacharya" class="filter-pill">Sri Madhvacharya (Dvaita)</a>
+    </div>
+  </div>
+
+  <!-- Main Content: The Three Acharyas In-Depth -->
+  <main class="container" style="padding-bottom: 6rem;">
+
+    <!-- ================= 1. ADI SHANKARACHARYA ================= -->
+    <article id="adi-shankara" class="detail-section-block" style="border-top: 4px solid var(--color-saffron);">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+        <div>
+          <span class="section-eyebrow">Philosophical School: Advaita Vedanta (Non-Dualism)</span>
+          <h2 style="color: var(--color-maroon); font-size: 2rem;">Adi Shankaracharya</h2>
+          <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">
+            Chronology: c. 788 – 820 CE (Traditional Matha reckoning: 509 – 477 BCE) • Birthplace: Kalady, Kerala • Mahasamadhi: Kedarnath, Himalayas
+          </span>
+        </div>
+        <span class="package-card-badge cat-bus" style="position: static; font-size: 0.8rem;">
+          <i class="fa-solid fa-sun"></i> Dakshinamnaya Peetham Lineage
+        </span>
+      </div>
+
+      <div class="acharya-quote-box" style="margin: 1.5rem 0;">
+        <div class="acharya-quote">"Brahma Satyam Jagan Mithya, Jivo Brahmaiva Naaparah"</div>
+        <div class="acharya-trans">Brahman (Pure Cosmic Consciousness) alone is fundamentally real; the empirical world is an appearance (Mithya); the individual soul is non-different from Brahman.</div>
+      </div>
+
+      <div class="detail-grid" style="grid-template-columns: 2fr 1fr; gap: 2.5rem; margin-top: 2rem;">
+        <div>
+          <h4 style="color: var(--color-maroon); margin-bottom: 0.8rem; font-size: 1.15rem;">
+            <i class="fa-solid fa-scroll" style="color: var(--color-saffron); margin-right: 0.4rem;"></i> Biography & Philosophical Consolidation
+          </h4>
+          <p class="detail-body-text" style="margin-bottom: 1rem;">
+            Born in the tranquil village of Kalady on the banks of the Poorna (Periyar) river to Sivaguru and Aryamba, Shankara demonstrated prodigy in Vedic shastras at the age of seven. Renouncing worldly householder life with his mother’s sacred permission, he walked barefoot across India to the Narmada river to be initiated by Guru Govinda Bhagavatpada (disciple of Gaudapada).
+          </p>
+          <p class="detail-body-text" style="margin-bottom: 1rem;">
+            In Varanasi and Badarikashrama, Shankara composed his monumental Bhashyas (commentaries) on the Prasthanatrayi: the major Upanishads, the Brahma Sutras of Badarayana, and the Bhagavad Gita. He synthesized fragmented, conflicting religious sects under the revered <em>Shanmata</em> system, standardizing the worship of Shiva, Vishnu, Shakti, Surya, Ganesha, and Kumara with Vedic mantras.
+          </p>
+
+          <!-- Historical Distinction Note -->
+          <div class="artist-disclaimer-notice" style="border-left-color: var(--color-gold); background: #FAF7F0;">
+            <strong><i class="fa-solid fa-scale-balanced"></i> Traditional Accounts vs. Documented Historical Record</strong>
+            Traditional hagiographies (such as the 14th-century <em>Madhaviya Shankara Digvijayam</em>) recount miraculous episodes: the crocodile incident in Kalady, Shankara reviving a poor woman's house with golden amlas (Kanakadhara Stotram), and debating Mandana Mishra with Ubhaya Bharati as arbiter. Historically, academic epigraphy and philosophical manuscripts corroborate Shankara’s profound reform: eliminating animal sacrifice and extreme sectarian violence, systematizing monastic orders (the Dashanami Sampradaya), and establishing enduring monastic institutions across the four corners of India.
+          </div>
+
+          <h4 style="color: var(--color-maroon); margin: 1.5rem 0 0.8rem 0; font-size: 1.15rem;">
+            <i class="fa-solid fa-compass" style="color: var(--color-saffron); margin-right: 0.4rem;"></i> The Four Cardinal Amnaya Peethams
+          </h4>
+          <div style="overflow-x: auto;">
+            <table class="admin-table" style="font-size: 0.82rem; margin-bottom: 1.5rem;">
+              <thead>
+                <tr>
+                  <th>Direction</th>
+                  <th>Peetham & Location</th>
+                  <th>Presiding Veda</th>
+                  <th>Mahavakya</th>
+                  <th>First Acharya</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>South</strong></td>
+                  <td>Dakshinamnaya Sharada Peetham, Sringeri (Karnataka)</td>
+                  <td>Yajur Veda</td>
+                  <td><em>Aham Brahmasmi</em></td>
+                  <td>Sri Sureshwaracharya</td>
+                </tr>
+                <tr>
+                  <td><strong>East</strong></td>
+                  <td>Purvamnaya Govardhana Matha, Puri (Odisha)</td>
+                  <td>Rig Veda</td>
+                  <td><em>Prajnanam Brahma</em></td>
+                  <td>Sri Padmapadacharya</td>
+                </tr>
+                <tr>
+                  <td><strong>West</strong></td>
+                  <td>Pashchimamnaya Sharada Peetham, Dwarka (Gujarat)</td>
+                  <td>Sama Veda</td>
+                  <td><em>Tat Tvam Asi</em></td>
+                  <td>Sri Hastamalakacharya</td>
+                </tr>
+                <tr>
+                  <td><strong>North</strong></td>
+                  <td>Uttaramnaya Jyotirmath, Badarikashrama (Uttarakhand)</td>
+                  <td>Atharva Veda</td>
+                  <td><em>Ayam Atma Brahma</em></td>
+                  <td>Sri Totakacharya</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <div style="background: var(--color-sandalwood); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-sandalwood-border);">
+            <h4 style="font-size: 1rem; color: var(--color-maroon); margin-bottom: 1rem;">
+              <i class="fa-solid fa-map-location-dot"></i> Sacred Shankara Pilgrimage Sites
+            </h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              <li><strong>Kalady (Kerala):</strong> Janmabhoomi & crocodile ghat.</li>
+              <li><strong>Omkareshwar (MP):</strong> Cave of Guru Govinda Bhagavatpada.</li>
+              <li><strong>Varanasi (UP):</strong> Manisha Panchakam & Manikarnika.</li>
+              <li><strong>Sringeri (Karnataka):</strong> Sharada Temple on Tunga.</li>
+              <li><strong>Kedarnath (Uttarakhand):</strong> Shankara Samadhi Mandir.</li>
+              <li><strong>Kanchi (Tamil Nadu):</strong> Kamakshi Amman & Sarvajna Peetha.</li>
+            </ul>
+
+            <h5 style="font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem;">
+              Recommended Prashanti Yatras:
+            </h5>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="package-detail.html?id=bus-sringeri-udupi" class="btn-explore" style="font-size: 0.72rem; padding: 0.5rem 0.8rem; background: var(--color-saffron);">
+                <span>Pancha Kshetras & Sringeri Yatra</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="package-detail.html?id=flight-char-dham-himalaya" class="btn-explore" style="font-size: 0.72rem; padding: 0.5rem 0.8rem; background: var(--color-maroon);">
+                <span>Char Dham & Kedarnath Air Yatra</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 2. SRI RAMANUJACHARYA ================= -->
+    <article id="ramanujacharya" class="detail-section-block" style="border-top: 4px solid var(--color-maroon); margin-top: 3.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+        <div>
+          <span class="section-eyebrow" style="color: var(--color-maroon);">Philosophical School: Vishishtadvaita (Qualified Non-Dualism)</span>
+          <h2 style="color: var(--color-maroon); font-size: 2rem;">Sri Ramanujacharya</h2>
+          <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">
+            Chronology: 1017 – 1137 CE (120 years of sacred life) • Birthplace: Sriperumbudur, Tamil Nadu • Mahasamadhi: Sri Ranganathaswamy Temple, Srirangam
+          </span>
+        </div>
+        <span class="package-card-badge cat-train" style="position: static; font-size: 0.8rem;">
+          <i class="fa-solid fa-hands-praying"></i> Sri Vaishnava Sampradaya Head
+        </span>
+      </div>
+
+      <div class="acharya-quote-box" style="margin: 1.5rem 0; border-left-color: var(--color-maroon);">
+        <div class="acharya-quote">"Bhakti-Prapatti-Samashrayah"</div>
+        <div class="acharya-trans">The Supreme Reality is Sriman Narayana with infinite auspicious attributes. Both sentient souls (Chit) and insentient matter (Achit) form His eternal cosmic body (Sharira-Shariri Bhava). Unreserved surrender (Prapatti) guarantees liberation to all.</div>
+      </div>
+
+      <div class="detail-grid" style="grid-template-columns: 2fr 1fr; gap: 2.5rem; margin-top: 2rem;">
+        <div>
+          <h4 style="color: var(--color-maroon); margin-bottom: 0.8rem; font-size: 1.15rem;">
+            <i class="fa-solid fa-scroll" style="color: var(--color-maroon); margin-right: 0.4rem;"></i> Biography, Compassion & Social Inclusion
+          </h4>
+          <p class="detail-body-text" style="margin-bottom: 1rem;">
+            Born to Asuri Kesava Somayaji and Kantimathi in Sriperumbudur, Ramanuja studied in Kanchipuram under Yadava Prakasha before being summoned to Srirangam to succeed the great acharya Yamunacharya (Alavandar). He walked to Thirukoshtiyur 18 times to receive initiation into the supreme Ashtakshari mantra from Guru Nambi.
+          </p>
+          <p class="detail-body-text" style="margin-bottom: 1rem;">
+            Upon receiving the sacred mantra with the warning that disclosing it would cast him into Naraka (hell), Ramanuja immediately scaled the temple gopuram and shouted the liberating mantra to all assembly townspeople. When his Guru confronted him, Ramanuja answered with profound tearful humility: <em>"If thousands of innocent souls can attain Vaikuntha through this mantra, I gladly accept hell a million times."</em>
+          </p>
+
+          <div class="artist-disclaimer-notice" style="border-left-color: var(--color-maroon); background: #FAF7F0;">
+            <strong><i class="fa-solid fa-scale-balanced"></i> Documented Temple Administration Reforms (Koil Olugu)</strong>
+            Sri Ramanuja’s historical administrative restructuring is recorded in the ancient chronicle <em>Koil Olugu</em> of Srirangam. He distributed temple duties among 10 distinct community groups, ensuring democratic participation. When persecuted by sectarian Chola ruler Kulottunga I, he resided in exile at Melkote (Karnataka) for 12 years, converting Hoysala King Vishnuvardhana, building the sacred Kalyani tank, and bringing oppressed Dalit communities into the temple fold as honored <em>Thirukulathar</em> ("Children of the Divine Mother Lakshmi").
+          </div>
+
+          <p class="detail-body-text" style="margin-top: 1rem;">
+            Today, Ramanuja’s preserved bodily form (known as the <strong>Thirumeni</strong>) rests in a seated posture inside the 5th enclosure of Srirangam temple, preserved using natural herbs, camphor, and saffron for nearly 900 years without embalming decay.
+          </p>
+        </div>
+
+        <div>
+          <div style="background: var(--color-sandalwood); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-sandalwood-border);">
+            <h4 style="font-size: 1rem; color: var(--color-maroon); margin-bottom: 1rem;">
+              <i class="fa-solid fa-map-location-dot"></i> Sacred Ramanuja Pilgrimage Sites
+            </h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              <li><strong>Sriperumbudur:</strong> Janmabhoomi & golden vimana.</li>
+              <li><strong>Srirangam:</strong> 156-acre Ranganatha Temple & Thirumeni.</li>
+              <li><strong>Melkote (Karnataka):</strong> Cheluvanarayana & Kalyani Kunda.</li>
+              <li><strong>Tirumala Tirupati:</strong> Systematized Venkateswara agamas.</li>
+              <li><strong>Kanchipuram:</strong> Varadharaja Perumal temple service.</li>
+            </ul>
+
+            <h5 style="font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem;">
+              Recommended Prashanti Yatras:
+            </h5>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="package-detail.html?id=train-dakshin-divya-desam" class="btn-explore" style="font-size: 0.72rem; padding: 0.5rem 0.8rem; background: var(--color-maroon);">
+                <span>Dakshin Bharat Divya Desam Rail Yatra</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="package-detail.html?id=bus-chola-navagraha" class="btn-explore" style="font-size: 0.72rem; padding: 0.5rem 0.8rem; background: var(--color-saffron);">
+                <span>Tamil Nadu Great Living Temples</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 3. SRI MADHVACHARYA ================= -->
+    <article id="madhvacharya" class="detail-section-block" style="border-top: 4px solid var(--color-forest); margin-top: 3.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+        <div>
+          <span class="section-eyebrow" style="color: var(--color-forest);">Philosophical School: Dvaita Vedanta / Tattvavada (Dualism)</span>
+          <h2 style="color: var(--color-maroon); font-size: 2rem;">Sri Madhvacharya (Ananda Tirtha)</h2>
+          <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">
+            Chronology: 1238 – 1317 CE (Vijayadashami appearance) • Birthplace: Pajaka Kshetra, Udupi, Karnataka • Badarikashrama Himalayan Ascent
+          </span>
+        </div>
+        <span class="package-card-badge cat-trekking" style="position: static; font-size: 0.8rem;">
+          <i class="fa-solid fa-om"></i> Founder of Udupi Ashta Mathas
+        </span>
+      </div>
+
+      <div class="acharya-quote-box" style="margin: 1.5rem 0; border-left-color: var(--color-forest);">
+        <div class="acharya-quote">"Harir-eva Paro Devas, Tattvam Veda-pratipaditam"</div>
+        <div class="acharya-trans">Sri Hari (Lord Vishnu) alone is Supreme. The soul, the material world, and God are eternally distinct (Bheda). Devoted loving surrender to Hari is the sole path of liberation.</div>
+      </div>
+
+      <div class="detail-grid" style="grid-template-columns: 2fr 1fr; gap: 2.5rem; margin-top: 2rem;">
+        <div>
+          <h4 style="color: var(--color-maroon); margin-bottom: 0.8rem; font-size: 1.15rem;">
+            <i class="fa-solid fa-scroll" style="color: var(--color-forest); margin-right: 0.4rem;"></i> Biography, Tattvavada & The Udupi Legacy
+          </h4>
+          <p class="detail-body-text" style="margin-bottom: 1rem;">
+            Born as Vasudeva in Pajaka Kshetra near the coastal town of Udupi to Madhva Geetha and Vedavati, he demonstrated towering intellectual faculties and immense physical strength. Revered traditionally as the third manifestation of Vayu (following Hanuman and Bhima), he was ordained as a sannyasi under Achyuta Preksha, taking the name Ananda Tirtha (Madhva).
+          </p>
+          <p class="detail-body-text" style="margin-bottom: 1rem;">
+            Madhvacharya rejected illusionist concepts of reality, formulating <strong>Tattvavada</strong> (the Philosophy of Reality). He posited the <em>Pancha Bheda</em> (Five Fundamental Differences): God and Soul, God and Matter, Soul and Soul, Soul and Matter, and Matter and Matter. For Madhva, the world is not an illusion; it is an objective reality created and sustained by the sovereign love of Bhagavan.
+          </p>
+
+          <div class="artist-disclaimer-notice" style="border-left-color: var(--color-forest); background: #FAF7F0;">
+            <strong><i class="fa-solid fa-scale-balanced"></i> Historical Establishment of the 700-Year Udupi Paryaya Rotation</strong>
+            Documented through unbroken stone inscriptions and copper plates, Madhvacharya consecrated the sacred Udupi Sri Krishna temple with the Saligrama stone idol retrieved from a merchant ship trapped at Malpe beach. To ensure unbroken worship without dynastic or administrative disputes, he established the <strong>Ashta Mathas</strong> (Eight Monasteries: Palimaru, Admaru, Krishnapura, Puttige, Shirur, Sode, Kaniyooru, and Pejawara). He instituted the biennial <em>Paryaya</em> rotation system, where the administration passes peacefully every two years—a system functioning flawlessly for over 700 years.
+          </div>
+        </div>
+
+        <div>
+          <div style="background: var(--color-sandalwood); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-sandalwood-border);">
+            <h4 style="font-size: 1rem; color: var(--color-maroon); margin-bottom: 1rem;">
+              <i class="fa-solid fa-map-location-dot"></i> Sacred Madhva Pilgrimage Sites
+            </h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              <li><strong>Pajaka Kshetra (Udupi):</strong> Birthplace & Kunjarugiri.</li>
+              <li><strong>Udupi Sri Krishna Matha:</strong> Kanakana Kindi window.</li>
+              <li><strong>Malpe Vadabhandeshwara:</strong> Balarama temple.</li>
+              <li><strong>Kanva Theertha:</strong> Writing of Brahma Sutras.</li>
+              <li><strong>Upper Badari:</strong> Meeting Sage Veda Vyasa.</li>
+            </ul>
+
+            <h5 style="font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem;">
+              Recommended Prashanti Yatras:
+            </h5>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="package-detail.html?id=bus-sringeri-udupi" class="btn-explore" style="font-size: 0.72rem; padding: 0.5rem 0.8rem; background: var(--color-forest);">
+                <span>Pancha Kshetras & Udupi Yatra</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="package-detail.html?id=flight-char-dham-himalaya" class="btn-explore" style="font-size: 0.72rem; padding: 0.5rem 0.8rem; background: var(--color-maroon);">
+                <span>Badarikashrama Himalayan Circuit</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col footer-brand-col">
+                    <div class="brand-identity" style="margin-bottom: 1rem;">
+            <img src="assets/logo.png" alt="Prashanti Paryatana Logo" class="brand-logo-img" style="width: 44px; height: 44px;" />
+            <div class="brand-text-wrap">
+              <span class="brand-name font-sanskrit-style" style="font-size: 1.15rem; color:#fff;">PRASANTHI <span>PARIYATANA</span></span>
+              <span class="brand-tagline">Sanatanam Nityam Nirantaram</span>
+            </div>
+          </div>
+          <p>Dedicated to Sanatana Dharma and the preservation of Indian cultural heritage through respectful pilgrimage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Main Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="bus-tours.html"><i class="fa-solid fa-bus-simple"></i> Bus Tours</a></li>
+            <li><a href="train-tours.html"><i class="fa-solid fa-train-subway"></i> Train Tours</a></li>
+            <li><a href="flight-packages.html"><i class="fa-solid fa-plane-departure"></i> Flight Packages</a></li>
+            <li><a href="trekking-expeditions.html"><i class="fa-solid fa-person-hiking"></i> Trekking Expeditions</a></li>
+            <li><a href="cultural.html"><i class="fa-solid fa-drum"></i> Cultural Travel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Spiritual Heritage</h4>
+          <ul class="footer-links-list">
+            <li><a href="acharyas.html"><i class="fa-solid fa-book-quran"></i> Three Great Acharyas</a></li>
+            <li><a href="heritage.html"><i class="fa-solid fa-gopuram"></i> Temple Architecture</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-hands-praying"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact & Helpdesk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pilgrimage Helpdesk</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>+91 98450 12345 / +91 80 2345 6789</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>yatra@prashantiparyatana.org</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Prashanti Paryatana. All rights reserved. Dedicated to Sanatana Dharma.</p>
+          <a href="admin.html" style="color: var(--color-gold);"><i class="fa-solid fa-lock"></i> Admin Console</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Modal & Mobile Drawer -->
+  <div id="enquiryModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-hands-praying" style="color: var(--color-gold-bright); margin-right: 0.5rem;"></i> Plan Your Sacred Journey</h3>
+        <button type="button" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="enquiryFormContainer">
+          <form id="enquiryForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" name="fullName" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" name="email" class="form-control" required />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Mobile Number <span class="req">*</span></label>
+                <input type="tel" name="phone" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Starting Location</label>
+                <input type="text" name="startingLocation" class="form-control" />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Category</label>
+                <select name="category" id="enqCategorySelect" class="form-control">
+                  <option value="all">Any Category</option>
+                  <option value="bus">Bus Tours</option>
+                  <option value="train">Train Tours</option>
+                  <option value="flight">Flight Packages</option>
+                  <option value="trekking">Trekking Expeditions</option>
+                  <option value="cultural">Cultural Travel</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Package</label>
+                <select name="preferredPackage" id="enqPackageSelect" class="form-control"></select>
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Departure Date <span class="req">*</span></label>
+                <input type="date" name="departureDate" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Travellers <span class="req">*</span></label>
+                <input type="number" name="travellers" min="1" max="40" class="form-control" value="2" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Special Requirements</label>
+              <textarea name="requirements" class="form-control" placeholder="Dietary needs, puja tokens..."></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Submit Travel Enquiry
+            </button>
+          </form>
+        </div>
+        <div id="enquiryConfirmationContainer" class="enquiry-confirmation" style="display: none;">
+          <div class="confirmation-badge-icon"><i class="fa-solid fa-check"></i></div>
+          <h3 style="color: var(--color-maroon);">Enquiry Registered!</h3>
+          <div class="reference-display-box">
+            <div id="confirmationRefCode" class="reference-code">PP-2026-YTR-0000</div>
+          </div>
+          <button type="button" class="btn-quick-enquire" onclick="closeEnquiryModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <span class="brand-name" style="font-size: 1.1rem;">Prashanti <span>Paryatana</span></span>
+        <button type="button" class="mobile-drawer-close" style="background:none; border:none; font-size: 1.4rem;">&times;</button>
+      </div>
+      <div class="mobile-drawer-links">
+        <a href="bus-tours.html" class="mobile-nav-item"><i class="fa-solid fa-bus-simple"></i> Bus Tours</a>
+        <a href="train-tours.html" class="mobile-nav-item"><i class="fa-solid fa-train-subway"></i> Train Tours</a>
+        <a href="flight-packages.html" class="mobile-nav-item"><i class="fa-solid fa-plane-departure"></i> Flight Packages</a>
+        <a href="trekking-expeditions.html" class="mobile-nav-item"><i class="fa-solid fa-person-hiking"></i> Trekking Expeditions</a>
+        <a href="cultural.html" class="mobile-nav-item"><i class="fa-solid fa-drum"></i> Cultural Travel</a>
+        <a href="index.html" class="mobile-nav-item"><i class="fa-solid fa-house"></i> Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

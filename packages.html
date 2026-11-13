@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Pilgrimage Packages | Prashanti Paryatana</title>
+  <meta name="description" content="Explore all spiritual, heritage, pilgrimage, and cultural journeys categorized by bus, train, flight, trekking, and cultural modes." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body data-page="packages">
+
+    <!-- ================= WEBSITE LOADING PRELOADER (FROM LOGO) ================= -->
+  <div id="sitePreloader" class="site-preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-mandala-ring"></div>
+        <div class="preloader-mandala-ring-outer"></div>
+        <img src="assets/logo.png" alt="Prashanti Paryatana" class="preloader-logo" />
+      </div>
+      <div class="preloader-sanskrit font-sanskrit-style">॥ सनातन संस्कृति यात्रा ॥</div>
+      <div class="preloader-title">PRASANTHI PARIYATANA</div>
+      <div class="preloader-tagline">Sanatanam Nityam Nirantaram</div>
+      <div class="preloader-progress-bar">
+        <div class="preloader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-om"></i>
+          <span class="font-sanskrit-style">॥ सनातन संस्कृति यात्रा • Dedicated to Sanatana Dharma ॥</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+919845012345">+91 98450 12345</a>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-links">
+          <a href="about.html">About</a>
+          <a href="heritage.html">Our Heritage</a>
+          <a href="acharyas.html">Acharyas</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a href="admin.html" class="admin-portal-link">
+          <i class="fa-solid fa-lock"></i> Admin Portal
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header-inner">
+            <a href="index.html" class="brand-identity">
+        <img src="assets/logo.png" alt="Prashanti Paryatana Logo" class="brand-logo-img" />
+        <div class="brand-text-wrap">
+          <span class="brand-name font-sanskrit-style">PRASANTHI <span>PARIYATANA</span></span>
+          <span class="brand-tagline">Sanatanam Nityam Nirantaram • Cultural Heritage</span>
+        </div>
+      </a>
+
+      <!-- 5 Prominent Categories -->
+      <nav class="categories-nav">
+        <a href="bus-tours.html" class="category-link">
+          <i class="fa-solid fa-bus-simple"></i>
+          <span>Bus Tours</span>
+        </a>
+        <a href="train-tours.html" class="category-link">
+          <i class="fa-solid fa-train-subway"></i>
+          <span>Train Tours</span>
+        </a>
+        <a href="flight-packages.html" class="category-link">
+          <i class="fa-solid fa-plane-departure"></i>
+          <span>Flight Packages</span>
+        </a>
+        <a href="trekking-expeditions.html" class="category-link">
+          <i class="fa-solid fa-person-hiking"></i>
+          <span>Trekking Expeditions</span>
+        </a>
+        <a href="cultural.html" class="category-link">
+          <i class="fa-solid fa-drum"></i>
+          <span>Cultural Travel</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-plan-journey" onclick="openEnquiryModal('', 'General Plan', 'all')">
+          <i class="fa-solid fa-hands-praying"></i>
+          <span>Plan Your Journey</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Hero -->
+  <section class="category-hero" style="background: linear-gradient(135deg, var(--color-maroon-deep) 0%, #150F0D 100%);">
+    <div class="container category-hero-content">
+      <span class="section-eyebrow" style="color: var(--color-gold-bright);">All Pilgrimage Yatras</span>
+      <h1>Sacred Journeys of Sanatana Dharma</h1>
+      <p>
+        Filter across our five central travel modes to discover authentic pilgrimages accompanied by scholars, sattvic meals, and reverent darshan schedules.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter & Search Bar -->
+  <div class="container filter-bar-wrap">
+    <div class="filter-bar">
+      <div class="filter-group">
+        <span class="filter-label">Category:</span>
+        <button type="button" class="filter-pill active" data-category="all">All Modes</button>
+        <button type="button" class="filter-pill" data-category="bus">Bus Tours</button>
+        <button type="button" class="filter-pill" data-category="train">Train Tours</button>
+        <button type="button" class="filter-pill" data-category="flight">Flight Packages</button>
+        <button type="button" class="filter-pill" data-category="trekking">Trekking</button>
+        <button type="button" class="filter-pill" data-category="cultural">Cultural Travel</button>
+      </div>
+
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="packageSearchInput" class="search-input" placeholder="Search by name, temple, or city..." />
+      </div>
+    </div>
+  </div>
+
+  <!-- Package Listing Grid -->
+  <main class="container" style="padding-bottom: 6rem;">
+    <div id="packagesGridContainer" class="packages-grid">
+      <!-- Populated dynamically by js/packages.js -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col footer-brand-col">
+                    <div class="brand-identity" style="margin-bottom: 1rem;">
+            <img src="assets/logo.png" alt="Prashanti Paryatana Logo" class="brand-logo-img" style="width: 44px; height: 44px;" />
+            <div class="brand-text-wrap">
+              <span class="brand-name font-sanskrit-style" style="font-size: 1.15rem; color:#fff;">PRASANTHI <span>PARIYATANA</span></span>
+              <span class="brand-tagline">Sanatanam Nityam Nirantaram</span>
+            </div>
+          </div>
+          <p>Dedicated to Sanatana Dharma and the preservation of Indian cultural heritage through respectful pilgrimage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Main Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="bus-tours.html"><i class="fa-solid fa-bus-simple"></i> Bus Tours</a></li>
+            <li><a href="train-tours.html"><i class="fa-solid fa-train-subway"></i> Train Tours</a></li>
+            <li><a href="flight-packages.html"><i class="fa-solid fa-plane-departure"></i> Flight Packages</a></li>
+            <li><a href="trekking-expeditions.html"><i class="fa-solid fa-person-hiking"></i> Trekking Expeditions</a></li>
+            <li><a href="cultural.html"><i class="fa-solid fa-drum"></i> Cultural Travel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Spiritual Heritage</h4>
+          <ul class="footer-links-list">
+            <li><a href="acharyas.html"><i class="fa-solid fa-book-quran"></i> Three Great Acharyas</a></li>
+            <li><a href="heritage.html"><i class="fa-solid fa-gopuram"></i> Temple Architecture</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-hands-praying"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact & Helpdesk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pilgrimage Helpdesk</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>+91 98450 12345 / +91 80 2345 6789</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>yatra@prashantiparyatana.org</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Prashanti Paryatana. All rights reserved. Dedicated to Sanatana Dharma.</p>
+          <a href="admin.html" style="color: var(--color-gold);"><i class="fa-solid fa-lock"></i> Admin Console</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Modal & Mobile Drawer -->
+  <div id="enquiryModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-hands-praying" style="color: var(--color-gold-bright); margin-right: 0.5rem;"></i> Plan Your Sacred Journey</h3>
+        <button type="button" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="enquiryFormContainer">
+          <form id="enquiryForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" name="fullName" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" name="email" class="form-control" required />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Mobile Number <span class="req">*</span></label>
+                <input type="tel" name="phone" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Starting Location</label>
+                <input type="text" name="startingLocation" class="form-control" />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Category</label>
+                <select name="category" id="enqCategorySelect" class="form-control">
+                  <option value="all">All Categories</option>
+                  <option value="bus">Bus Tours</option>
+                  <option value="train">Train Tours</option>
+                  <option value="flight">Flight Packages</option>
+                  <option value="trekking">Trekking Expeditions</option>
+                  <option value="cultural">Cultural Travel</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Package</label>
+                <select name="preferredPackage" id="enqPackageSelect" class="form-control"></select>
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Departure Date <span class="req">*</span></label>
+                <input type="date" name="departureDate" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Travellers <span class="req">*</span></label>
+                <input type="number" name="travellers" min="1" max="40" class="form-control" value="2" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Special Requirements</label>
+              <textarea name="requirements" class="form-control" placeholder="Dietary needs, puja requests..."></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Submit Travel Enquiry
+            </button>
+          </form>
+        </div>
+        <div id="enquiryConfirmationContainer" class="enquiry-confirmation" style="display: none;">
+          <div class="confirmation-badge-icon"><i class="fa-solid fa-check"></i></div>
+          <h3 style="color: var(--color-maroon);">Enquiry Registered!</h3>
+          <div class="reference-display-box">
+            <div id="confirmationRefCode" class="reference-code">PP-2026-YTR-0000</div>
+          </div>
+          <div id="confirmationSummary" style="font-size: 0.85rem; text-align: left; background: #fff; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-sandalwood-border); margin-bottom: 1.5rem;"></div>
+          <button type="button" class="btn-quick-enquire" onclick="closeEnquiryModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <span class="brand-name" style="font-size: 1.1rem;">Prashanti <span>Paryatana</span></span>
+        <button type="button" class="mobile-drawer-close" style="background:none; border:none; font-size: 1.4rem;">&times;</button>
+      </div>
+      <div class="mobile-drawer-links">
+        <a href="bus-tours.html" class="mobile-nav-item"><i class="fa-solid fa-bus-simple"></i> Bus Tours</a>
+        <a href="train-tours.html" class="mobile-nav-item"><i class="fa-solid fa-train-subway"></i> Train Tours</a>
+        <a href="flight-packages.html" class="mobile-nav-item"><i class="fa-solid fa-plane-departure"></i> Flight Packages</a>
+        <a href="trekking-expeditions.html" class="mobile-nav-item"><i class="fa-solid fa-person-hiking"></i> Trekking Expeditions</a>
+        <a href="cultural.html" class="mobile-nav-item"><i class="fa-solid fa-drum"></i> Cultural Travel</a>
+        <a href="index.html" class="mobile-nav-item"><i class="fa-solid fa-house"></i> Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/packages.js"></script>
+</body>
+</html>

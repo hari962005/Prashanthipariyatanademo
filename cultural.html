@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cultural Travel Portal | Prashanti Paryatana</title>
+  <meta name="description" content="Immerse in classical Indian sacred arts: Attend Carnatic, Hindustani, Bharatanatyam, and temple festivals, or register as a classical artist for sacred performances." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body data-page="cultural" data-page-category="cultural">
+
+  <!-- ================= WEBSITE LOADING PRELOADER (FROM LOGO) ================= -->
+  <div id="sitePreloader" class="site-preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-mandala-ring"></div>
+        <div class="preloader-mandala-ring-outer"></div>
+        <img src="assets/logo.png" alt="Prashanti Paryatana" class="preloader-logo" />
+      </div>
+      <div class="preloader-sanskrit font-sanskrit-style">॥ सनातन संस्कृति यात्रा ॥</div>
+      <div class="preloader-title">PRASANTHI PARIYATANA</div>
+      <div class="preloader-tagline">Sanatanam Nityam Nirantaram</div>
+      <div class="preloader-progress-bar">
+        <div class="preloader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fa-solid fa-om"></i>
+          <span class="font-sanskrit-style">॥ सनातन संस्कृति यात्रा • Dedicated to Sanatana Dharma ॥</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+919845012345">+91 98450 12345</a>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-links">
+          <a href="about.html">About</a>
+          <a href="heritage.html">Our Heritage</a>
+          <a href="acharyas.html">Acharyas</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a href="admin.html" class="admin-portal-link">
+          <i class="fa-solid fa-lock"></i> Admin Portal
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a href="index.html" class="brand-identity">
+        <img src="assets/logo.png" alt="Prashanti Paryatana Logo" class="brand-logo-img" />
+        <div class="brand-text-wrap">
+          <span class="brand-name font-sanskrit-style">PRASANTHI <span>PARIYATANA</span></span>
+          <span class="brand-tagline">Sanatanam Nityam Nirantaram • Cultural Heritage</span>
+        </div>
+      </a>
+
+      <!-- 5 Prominent Categories -->
+      <nav class="categories-nav">
+        <a href="bus-tours.html" class="category-link">
+          <i class="fa-solid fa-bus-simple"></i>
+          <span>Bus Tours</span>
+        </a>
+        <a href="train-tours.html" class="category-link">
+          <i class="fa-solid fa-train-subway"></i>
+          <span>Train Tours</span>
+        </a>
+        <a href="flight-packages.html" class="category-link">
+          <i class="fa-solid fa-plane-departure"></i>
+          <span>Flight Packages</span>
+        </a>
+        <a href="trekking-expeditions.html" class="category-link">
+          <i class="fa-solid fa-person-hiking"></i>
+          <span>Trekking Expeditions</span>
+        </a>
+        <a href="cultural.html" class="category-link active">
+          <i class="fa-solid fa-drum"></i>
+          <span>Cultural Travel</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-plan-journey" onclick="openEnquiryModal('', 'Cultural Travel Enquiry', 'cultural')">
+          <i class="fa-solid fa-hands-praying"></i>
+          <span>Plan Your Journey</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Hero with Background Slideshow -->
+  <section class="cultural-hero" style="position: relative; overflow: hidden; min-height: 480px; display: flex; align-items: center;">
+    <!-- Background Slideshow of Real Cultural Programs -->
+    <div class="cultural-slideshow-container">
+      <div class="cultural-bg-slide active" style="background-image: url('assets/cultural/ayodhya-dance.jpg');"></div>
+      <div class="cultural-bg-slide" style="background-image: url('assets/cultural/carnatic-kutcheri.jpg');"></div>
+      <div class="cultural-bg-slide" style="background-image: url('assets/cultural/kukke-subrahmanya-stage.jpg');"></div>
+      <div class="cultural-bg-slide" style="background-image: url('assets/cultural/golden-temple-artists.jpg');"></div>
+      <div class="cultural-bg-slide" style="background-image: url('assets/cultural/music-dance-federation.jpg');"></div>
+      <div class="cultural-bg-slide" style="background-image: url('assets/cultural/mridangam-vidwan.jpg');"></div>
+      <div class="cultural-slideshow-overlay"></div>
+    </div>
+
+    <div class="container" style="text-align: center; max-width: 860px; position: relative; z-index: 3;">
+      <span class="section-eyebrow font-sanskrit-style" style="color: var(--color-gold-bright); letter-spacing: 0.12em;">॥ नाद-नाट्य योग • Travel Category 05 ॥</span>
+      <h1 class="font-sanskrit-style" style="color: #fff; margin-bottom: 1rem; font-size: clamp(2.2rem, 5vw, 3.2rem);">Cultural Travel Portal</h1>
+      <p style="color: var(--color-sandalwood-light); font-size: 1.15rem; font-family: var(--font-serif); line-height: 1.6; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">
+        Connecting devotees, classical music enthusiasts, and traditional artists with ancient temple festivals, sacred music sabhas, and classical dance stages across Bharat.
+      </p>
+
+      <!-- Navigation Tabs Between Section A and Section B -->
+      <div class="cultural-nav-tabs">
+        <button type="button" class="cultural-tab-btn active" data-target="events">
+          <i class="fa-solid fa-masks-theater"></i> A. Attend Cultural Performances
+        </button>
+        <button type="button" class="cultural-tab-btn" data-target="artist">
+          <i class="fa-solid fa-id-card-clip"></i> B. Classical Artist Participation
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION A: ATTEND CULTURAL PERFORMANCES ================= -->
+  <section id="culturalEventsSection" style="padding: 4.5rem 0 6rem 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Section A • Sacred Music & Dance</span>
+        <h2>Attend Prestigious Classical Performances</h2>
+        <div class="decorative-divider">
+          <span></span><i class="fa-solid fa-om"></i><span></span>
+        </div>
+        <p>
+          Travel domestically or internationally to experience timeless Carnatic concerts, Hindustani baithaks, Bharatanatyam, Kuchipudi, Kathak, and temple Natyanjali festivals with reserved premium seating and curated heritage stays.
+        </p>
+      </div>
+
+      <!-- Genre Filter Pills -->
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 3rem;">
+        <button type="button" class="filter-pill genre-filter-pill active" onclick="filterEventsByGenre('all', this)">All Genres</button>
+        <button type="button" class="filter-pill genre-filter-pill" onclick="filterEventsByGenre('Carnatic', this)">Carnatic Music</button>
+        <button type="button" class="filter-pill genre-filter-pill" onclick="filterEventsByGenre('Hindustani', this)">Hindustani Classical</button>
+        <button type="button" class="filter-pill genre-filter-pill" onclick="filterEventsByGenre('Bharatanatyam', this)">Bharatanatyam</button>
+        <button type="button" class="filter-pill genre-filter-pill" onclick="filterEventsByGenre('Kathak', this)">Kathak & Kuchipudi</button>
+        <button type="button" class="filter-pill genre-filter-pill" onclick="filterEventsByGenre('Natyanjali', this)">Temple Natyanjali Festivals</button>
+      </div>
+
+      <!-- Events Grid -->
+      <div id="culturalEventsGrid" class="events-grid">
+        <!-- Rendered dynamically by js/cultural.js -->
+      </div>
+
+      <!-- Related Curated Cultural Packages -->
+      <div style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--color-sandalwood-border);">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-eyebrow">Curated Cultural Journeys</span>
+          <h3>All-Inclusive Cultural Travel Packages</h3>
+          <p>Complete journeys combining festival attendance with artisan visits and sacred temple circuits.</p>
+        </div>
+        <div id="culturalPackagesGrid" class="packages-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Live Glimpses of Prashanti Cultural Programs -->
+      <div style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--color-sandalwood-border);">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="section-eyebrow font-sanskrit-style" style="color: var(--color-saffron);">॥ प्रत्यक्षमूलावलोकनम् • Living Traditions ॥</span>
+          <h3 class="font-sanskrit-style">Glimpses of Prashanti Cultural Programs & Temple Utsavas</h3>
+          <div class="decorative-divider">
+            <span></span><i class="fa-solid fa-om"></i><span></span>
+          </div>
+          <p>Authentic moments from our sacred temple dance dedications, classical Carnatic sabhas, and artist assemblies across sacred kshetras.</p>
+        </div>
+
+        <div class="cultural-gallery-grid">
+          <div class="cultural-photo-card">
+            <img src="assets/cultural/ayodhya-dance.jpg" alt="Ayodhya Sri Rama Mandir Classical Dance" loading="lazy" />
+            <div class="cultural-photo-caption">
+              <strong>Ayodhya Sri Rama Mandir Mahotsav</strong>
+              <span>Classical temple dance dedication before Bhagwan Ram Lalla</span>
+            </div>
+          </div>
+          <div class="cultural-photo-card">
+            <img src="assets/cultural/carnatic-kutcheri.jpg" alt="Margazhi Carnatic Kutcheri" loading="lazy" />
+            <div class="cultural-photo-caption">
+              <strong>Margazhi Sacred Sabha Kutcheri</strong>
+              <span>Eminent Carnatic vocal, violin & laya vadya ensemble recital</span>
+            </div>
+          </div>
+          <div class="cultural-photo-card">
+            <img src="assets/cultural/kukke-subrahmanya-stage.jpg" alt="Kukke Sri Subrahmanya Temple Mahotsava" loading="lazy" />
+            <div class="cultural-photo-caption">
+              <strong>Kukke Sri Subrahmanya Temple Mahotsava</strong>
+              <span>Traditional temple utsava stage presentation and devotional tribute</span>
+            </div>
+          </div>
+          <div class="cultural-photo-card">
+            <img src="assets/cultural/golden-temple-artists.jpg" alt="Sacred Sanctum Artist Darshan" loading="lazy" />
+            <div class="cultural-photo-caption">
+              <strong>Sacred Sanctum Artist Darshan</strong>
+              <span>Accompanied classical exponents receiving divine sanctum blessings</span>
+            </div>
+          </div>
+          <div class="cultural-photo-card">
+            <img src="assets/cultural/music-dance-federation.jpg" alt="Bharatiya Music & Dance Artists Federation" loading="lazy" />
+            <div class="cultural-photo-caption">
+              <strong>Bharatiya Classical Artists Samelan</strong>
+              <span>Grand congregation of guru-shishya parampara vidwans & artists</span>
+            </div>
+          </div>
+          <div class="cultural-photo-card">
+            <img src="assets/cultural/mridangam-vidwan.jpg" alt="Laya Vadya Percussion Vidwan" loading="lazy" />
+            <div class="cultural-photo-caption">
+              <strong>Laya Vadya & Percussion Heritage</strong>
+              <span>Master percussionist with sacred mridangam & traditional rhythm instruments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION B: ARTIST PARTICIPATION ================= -->
+  <section id="artistRegistrationSection" style="padding: 4.5rem 0 6rem 0; display: none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Section B • For Performing Artists</span>
+        <h2>Classical Artist Temple Program Registration</h2>
+        <div class="decorative-divider">
+          <span></span><i class="fa-solid fa-om"></i><span></span>
+        </div>
+        <p>
+          Classical musicians, vocalists, instrumentalists, and classical dancers may register their interest to offer their art in sacred temple spaces and heritage festivals.
+        </p>
+      </div>
+
+      <div class="artist-registration-wrap">
+        <!-- Explicit Mandatory Disclaimer -->
+        <div class="artist-disclaimer-notice">
+          <strong><i class="fa-solid fa-triangle-exclamation"></i> Important Temple Protocol & Permissions Notice</strong>
+          Please understand that performances in temple sanctums and heritage sabhas are strictly subject to temple trust guidelines, hereditary agama customs, and festival committee permissions. Prashanti Paryatana acts as a cultural coordinator and facilitator to match verified artists with suitable temple trusts and auspicious utsavam dates.
+        </div>
+
+        <div id="artistFormContainer">
+          <form id="artistRegistrationForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Artist Full Name <span class="req">*</span></label>
+                <input type="text" name="artistName" class="form-control" placeholder="e.g. Smt. Gayatri Ramaswamy" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" name="artistEmail" class="form-control" placeholder="artist@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Phone Number / WhatsApp <span class="req">*</span></label>
+                <input type="tel" name="artistPhone" class="form-control" placeholder="+91 94440 12345" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">City of Residence <span class="req">*</span></label>
+                <input type="text" name="artistCity" class="form-control" placeholder="e.g. Chennai, Bengaluru, Mumbai" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Country <span class="req">*</span></label>
+                <input type="text" name="artistCountry" class="form-control" value="India" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Art Form & Disciplinary School (Bani/Gharana) <span class="req">*</span></label>
+                <input type="text" name="artistArtForm" class="form-control" placeholder="e.g. Bharatanatyam (Kalakshetra), Carnatic Vocal, Saraswathi Veena" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Years of Performing Experience <span class="req">*</span></label>
+                <input type="text" name="artistExperience" class="form-control" placeholder="e.g. 12 years (Graded AIR/Doordarshan)" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Performance Location / Circuit <span class="req">*</span></label>
+                <input type="text" name="artistLocation" class="form-control" placeholder="e.g. Thanjavur, Sringeri, Udupi, Kashi, Melkote" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Seasonal Availability (Months / Festivals)</label>
+              <input type="text" name="artistAvailability" class="form-control" placeholder="e.g. Maha Shivaratri, Margazhi Season, Navaratri, Weekends" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Portfolio or Performance Video Link (YouTube / Drive / Web) <span class="req">*</span></label>
+              <input type="url" name="artistPortfolio" class="form-control" placeholder="https://youtube.com/watch?v=your-performance" required />
+              <small style="color: var(--text-muted); font-size: 0.78rem;">Please share a clear recording of a live concert or stage recital.</small>
+            </div>
+
+            <button type="submit" class="form-submit-btn" style="margin-top: 1rem;">
+              <i class="fa-solid fa-hands-praying"></i> Submit Artist Registration
+            </button>
+          </form>
+        </div>
+
+        <!-- Success Feedback for Artist Registration -->
+        <div id="artistSuccessContainer" style="display: none; text-align: center; padding: 2rem 0;">
+          <div class="confirmation-badge-icon"><i class="fa-solid fa-check"></i></div>
+          <h3 style="color: var(--color-maroon); margin-bottom: 0.5rem;">Registration Submitted With Reverence</h3>
+          <p style="color: var(--text-secondary); max-width: 520px; margin: 0 auto 1.5rem auto;">
+            Namaskaram. Your artistic portfolio has been received. Our cultural advisory board will review your performance link against upcoming temple utsavam schedules.
+          </p>
+          <div class="reference-display-box">
+            <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Artist Registration ID</span>
+            <div id="artistRegIdDisplay" class="reference-code">ART-2026-000</div>
+          </div>
+          <button type="button" class="btn-explore" style="margin: 0 auto; display: inline-flex;" onclick="resetArtistForm()">
+            <span>Submit Another Registration</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col footer-brand-col">
+          <div class="brand-identity" style="margin-bottom: 1rem;">
+            <img src="assets/logo.png" alt="Prashanti Paryatana Logo" class="brand-logo-img" style="width: 44px; height: 44px;" />
+            <div class="brand-text-wrap">
+              <span class="brand-name font-sanskrit-style" style="font-size: 1.15rem; color:#fff;">PRASANTHI <span>PARIYATANA</span></span>
+              <span class="brand-tagline">Sanatanam Nityam Nirantaram</span>
+            </div>
+          </div>
+          <p>Dedicated to Sanatana Dharma and the preservation of Indian cultural heritage through respectful pilgrimage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Main Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="bus-tours.html"><i class="fa-solid fa-bus-simple"></i> Bus Tours</a></li>
+            <li><a href="train-tours.html"><i class="fa-solid fa-train-subway"></i> Train Tours</a></li>
+            <li><a href="flight-packages.html"><i class="fa-solid fa-plane-departure"></i> Flight Packages</a></li>
+            <li><a href="trekking-expeditions.html"><i class="fa-solid fa-person-hiking"></i> Trekking Expeditions</a></li>
+            <li><a href="cultural.html"><i class="fa-solid fa-drum"></i> Cultural Travel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Spiritual Heritage</h4>
+          <ul class="footer-links-list">
+            <li><a href="acharyas.html"><i class="fa-solid fa-book-quran"></i> Three Great Acharyas</a></li>
+            <li><a href="heritage.html"><i class="fa-solid fa-gopuram"></i> Temple Architecture</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-hands-praying"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact & Helpdesk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pilgrimage Helpdesk</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>+91 98450 12345 / +91 80 2345 6789</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>yatra@prashantiparyatana.org</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Prashanti Paryatana. All rights reserved. Dedicated to Sanatana Dharma.</p>
+          <a href="admin.html" style="color: var(--color-gold);"><i class="fa-solid fa-lock"></i> Admin Console</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Modal & Mobile Drawer -->
+  <div id="enquiryModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-hands-praying" style="color: var(--color-gold-bright); margin-right: 0.5rem;"></i> Plan Your Sacred Journey</h3>
+        <button type="button" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="enquiryFormContainer">
+          <form id="enquiryForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" name="fullName" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" name="email" class="form-control" required />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Mobile Number <span class="req">*</span></label>
+                <input type="tel" name="phone" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Starting Location</label>
+                <input type="text" name="startingLocation" class="form-control" />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Category</label>
+                <select name="category" id="enqCategorySelect" class="form-control">
+                  <option value="cultural" selected>Cultural Travel</option>
+                  <option value="bus">Bus Tours</option>
+                  <option value="train">Train Tours</option>
+                  <option value="flight">Flight Packages</option>
+                  <option value="trekking">Trekking Expeditions</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Package</label>
+                <select name="preferredPackage" id="enqPackageSelect" class="form-control"></select>
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Departure Date <span class="req">*</span></label>
+                <input type="date" name="departureDate" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Travellers <span class="req">*</span></label>
+                <input type="number" name="travellers" min="1" max="40" class="form-control" value="2" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Special Requirements</label>
+              <textarea name="requirements" class="form-control" placeholder="Festival seating, instruments handling, elder care..."></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Submit Cultural Travel Enquiry
+            </button>
+          </form>
+        </div>
+        <div id="enquiryConfirmationContainer" class="enquiry-confirmation" style="display: none;">
+          <div class="confirmation-badge-icon"><i class="fa-solid fa-check"></i></div>
+          <h3 style="color: var(--color-maroon);">Enquiry Registered!</h3>
+          <div class="reference-display-box">
+            <div id="confirmationRefCode" class="reference-code">PP-2026-YTR-0000</div>
+          </div>
+          <div id="confirmationSummary" style="font-size: 0.85rem; text-align: left; background: #fff; padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-sandalwood-border); margin-bottom: 1.5rem;"></div>
+          <button type="button" class="btn-quick-enquire" onclick="closeEnquiryModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <span class="brand-name" style="font-size: 1.1rem;">Prashanti <span>Paryatana</span></span>
+        <button type="button" class="mobile-drawer-close" style="background:none; border:none; font-size: 1.4rem;">&times;</button>
+      </div>
+      <div class="mobile-drawer-links">
+        <a href="bus-tours.html" class="mobile-nav-item"><i class="fa-solid fa-bus-simple"></i> Bus Tours</a>
+        <a href="train-tours.html" class="mobile-nav-item"><i class="fa-solid fa-train-subway"></i> Train Tours</a>
+        <a href="flight-packages.html" class="mobile-nav-item"><i class="fa-solid fa-plane-departure"></i> Flight Packages</a>
+        <a href="trekking-expeditions.html" class="mobile-nav-item"><i class="fa-solid fa-person-hiking"></i> Trekking Expeditions</a>
+        <a href="cultural.html" class="mobile-nav-item active"><i class="fa-solid fa-drum"></i> Cultural Travel</a>
+        <a href="index.html" class="mobile-nav-item"><i class="fa-solid fa-house"></i> Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cultural.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Render cultural packages under Section A
+      const container = document.getElementById('culturalPackagesGrid');
+      if (container && window.PrashantiDB) {
+        const cultPackages = window.PrashantiDB.getPackagesByCategory('cultural');
+        container.innerHTML = cultPackages.map(p => window.createPackageCardHTML(p)).join('');
+      }
+
+      // Check if URL has #artist-registration hash
+      if (window.location.hash === '#artist-registration') {
+        const artistTab = document.querySelector('.cultural-tab-btn[data-target="artist"]');
+        if (artistTab) artistTab.click();
+      }
+    });
+  </script>
+</body>
+</html>
